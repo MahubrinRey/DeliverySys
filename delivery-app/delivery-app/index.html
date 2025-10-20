@@ -71,10 +71,25 @@
             <div id="notification-area" class="absolute top-4 right-4 w-auto z-50 hidden">
                 </div>
             <div id="app-content">
-                </div>
+        </div>
+    
+    <div id="repartidor-control" class="p-6 bg-white shadow-lg rounded-xl mb-6 hidden">
+        <h2 class="text-2xl font-bold mb-4 text-cyan-700">Mi Estado de Servicio</h2>
+        <div class="flex items-center">
+            <span class="text-lg font-semibold mr-4">Estado Actual:</span>
+            <span id="repartidor-current-status" class="px-3 py-1 rounded-full font-bold text-white bg-gray-400">Cargando...</span>
+            <button id="toggle-status-button" data-status="ocupado" class="ml-auto px-6 py-2 rounded-lg font-bold text-white transition-colors">
+                Cambiar Estado
+            </button>
+        </div>
+    </div>
+    
+    <div id="pedidos-view" class="view hidden">
+// ...
         </main>
     </div>
 
     <script src="js/app.js"></script>
 </body>
+
 </html>
