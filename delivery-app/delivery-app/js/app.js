@@ -21,15 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let clientes = [];
     let carrito = []; // Carrito de compras para crear nuevo pedido
 
-    // --- FUNCIONES DE UTILIDAD (NOTIFICACIONES) ---
-    function showNotification(message, type = 'success') {
-        notificationArea.innerHTML = `<div class="p-3 rounded-lg ${type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}">${message}</div>`;
-        notificationArea.style.display = 'block';
-        setTimeout(() => {
-            notificationArea.style.display = 'none';
-            notificationArea.innerHTML = '';
-        }, 5000); // Ocultar después de 5 segundos
-    }
+// js/app.js
+// ... (después de la función showNotification)
 
 // --- FUNCIÓN PARA CAMBIAR ESTADO DE REPARTIDOR ---
 /**
@@ -76,7 +69,6 @@ async function toggleRepartidorStatus(id, newStatus) {
     }
 }
 // ...
-
     // --- FUNCIONES DE API GENÉRICAS ---
     async function apiRequest(endpoint, method = 'GET', data = null, id = null) {
         try {
@@ -1104,3 +1096,4 @@ async function toggleRepartidorStatus(id, newStatus) {
     checkSession();
 
 });
+
